@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chicago Happy Hours</title>
+</head>
+<body>
+    <h1>Chicago Happy Hours</h1>
+    <ul>
+        {% for venue in venues %}
+            <li>{{ venue.name }} — {{ venue.neighborhood }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

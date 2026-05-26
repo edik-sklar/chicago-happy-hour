@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Venue
 
-# Create your views here.
+def venue_list(request):
+    venues = Venue.objects.all()
+    return render(request, 'venues/venue_list.html', {'venues': venues})
