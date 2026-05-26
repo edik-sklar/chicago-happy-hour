@@ -1,0 +1,22 @@
+[
+{
+  "model": "venues.source",
+  "pk": 1,
+  "fields": {
+    "name": "TimeOut Chicago",
+    "url": "https://www.timeout.com/chicago/bars/best-happy-hours-in-chicago",
+    "active": true,
+    "created_at": "2026-05-26T04:56:45.494Z"
+  }
+},
+{
+  "model": "venues.source",
+  "pk": 2,
+  "fields": {
+    "name": "Eater Chicago",
+    "url": "https://eater.com/maps/best-happy-hours-chicago",
+    "active": true,
+    "created_at": "2026-05-26T04:57:11.636Z"
+  }
+}
+]
