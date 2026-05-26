@@ -1,4 +1,4 @@
 HAPPY_HOUR_SOURCES = [
-    "https://www.timeout.com/chicago/bars/best-happy-hours-in-chicago",
-    "https://www.eater.com/maps/best-happy-hours-chicago",
+    "https://www.312deals.com/guides/chicago-happy-hours",
+    "https://chicago.eater.com/maps/chicago-happy-hour-drink-specials-deals-affordable-cocktails",
 ]
