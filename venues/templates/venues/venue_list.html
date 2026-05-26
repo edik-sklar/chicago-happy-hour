@@ -7,7 +7,16 @@
     <h1>Chicago Happy Hours</h1>
     <ul>
         {% for venue in venues %}
-            <li>{{ venue.name }} — {{ venue.neighborhood }}</li>
+            <li>
+                <strong>{{ venue.name }}</strong> — {{ venue.neighborhood }}
+                <ul>
+                    {% for hh in venue.happyhour_set.all %}
+                        <li>{{ hh.day_of_week }} {{ hh.start_time }}–{{ hh.end_time }}: {{ hh.deal }}</li>
+                    {% empty %}
+                        <li>No happy hours listed yet.</li>
+                    {% endfor %}
+                </ul>
+            </li>
         {% endfor %}
     </ul>
 </body>

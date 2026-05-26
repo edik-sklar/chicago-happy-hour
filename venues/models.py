@@ -1,12 +1,16 @@
 from django.db import models
 
 class Source(models.Model):
+    def __str__(self):
+        return self.name
     name = models.CharField(max_length=100)
     url = models.URLField()
     active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
 class Venue(models.Model):
+    def __str__(self):
+        return self.name
     name             = models.CharField(max_length=200)
     neighborhood     = models.CharField(max_length=100)
     address          = models.TextField()
@@ -21,6 +25,8 @@ class Venue(models.Model):
 
 
 class HappyHour(models.Model):
+    def __str__(self):
+        return f"{self.venue.name} — {self.day_of_week}"
     venue         = models.ForeignKey(Venue, on_delete=models.CASCADE)
     day_of_week   = models.CharField(max_length=10)
     start_time    = models.TimeField()
