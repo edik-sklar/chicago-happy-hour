@@ -28,7 +28,7 @@ class HappyHour(models.Model):
     def __str__(self):
         return f"{self.venue.name} — {self.day_of_week}"
     venue         = models.ForeignKey(Venue, on_delete=models.CASCADE)
-    day_of_week   = models.CharField(max_length=50)
+    day_of_week   = models.TextField()
     start_time    = models.TimeField()
     end_time      = models.TimeField()
     deal          = models.TextField()
